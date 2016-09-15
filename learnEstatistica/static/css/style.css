@@ -9,8 +9,19 @@ body{
 }
 footer{
     background-color: #07a5a2;
-    min-height: 80px; 
+    min-height: 80px;
 }
 .content{
     min-height: 800px;
+}
+.gray-effect {
+  filter: gray; /* IE6-9 */
+  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+/* Disable grayscale on hover */
+.gray-effect:hover {
+  filter: none;
+  filter: grayscale(0); /* Microsoft Edge and Firefox 35+ */
+  -webkit-filter: grayscale(0);
 }
