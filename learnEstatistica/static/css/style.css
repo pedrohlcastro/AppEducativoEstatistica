@@ -9,10 +9,11 @@ body{
 }
 footer{
     background-color: #07a5a2;
-    min-height: 80px;
+    display: flex;
+    min-height: 120px;
 }
 .content{
-    min-height: 800px;
+    min-height: 700px;
 }
 .gray-effect {
   filter: gray; /* IE6-9 */
