@@ -1,3 +1,15 @@
+main {
+  flex: 1 0 auto;
+}
 body{
-    background-color: #3E434D;
+    background-color: #0759A5;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+footer{
+    background-color: #07a5a2;
+}
+.content{
+    min-height: 800px;
 }
