@@ -1,0 +1,23 @@
+{% extends "main.html"%}
+{% block title%}{{obj.name}}{% endblock title%}
+{%load staticfiles%}
+{% block content %}
+  <section class="container white-text content ">
+    <h1>{{obj.title}}</h1>
+    <div class="flow-text">
+      {{obj.fulltext|safe}}
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col s1 push-s4" style="padding-top: 25px;">
+          <a class="btn-floating btn-large waves-effect waves-light red" href="{% url "home1"%}"><i class="material-icons">view_module</i></a>
+        </div>
+        <div class="col s1 push-s5"style="padding-top: 25px;">
+          <a class="btn-floating btn-large waves-effect waves-light red" heref="{{obj.link}}"><i class="material-icons">skip_next</i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+{% endblock content%}

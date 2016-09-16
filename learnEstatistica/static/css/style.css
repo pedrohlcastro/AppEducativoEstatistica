@@ -1,19 +1,10 @@
-main {
-  flex: 1 0 auto;
-}
-body{
-    background-color: #0759A5;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
 footer{
     background-color: #07a5a2;
     display: flex;
     min-height: 120px;
 }
 .content{
-    min-height: 700px;
+    min-height: 650px;
 }
 .gray-effect {
   filter: gray; /* IE6-9 */
