@@ -15,7 +15,12 @@
           <a class="btn-floating btn-large waves-effect waves-light red" href="{% url "home1"%}"><i class="material-icons">view_module</i></a>
         </div>
         <div class="col s1 push-s5"style="padding-top: 25px;">
-          <a class="btn-floating btn-large waves-effect waves-light red" heref="{{obj.link}}"><i class="material-icons">skip_next</i></a>
+          {%if obj.link == '-1' %}
+            <a class="btn-floating btn-large waves-effect waves-light red" href="{%url "home1"%}"><i class="material-icons">skip_next</i></a>
+          {%else%}
+            <a class="btn-floating btn-large waves-effect waves-light red" href="{%url "central" obj.link%}"><i class="material-icons">skip_next</i></a>
+          {%endif%}
+          
         </div>
       </div>
     </div>
