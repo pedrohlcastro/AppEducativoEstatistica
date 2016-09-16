@@ -10,13 +10,34 @@ def central(request,page):
 	return render(request,'ensino.html',obj)
 
 def posicao(request,page):
-	pass
+	allEnsino = Ensino.objects.all()
+	obj = {};
+	for o in allEnsino:
+		if(str(o.name) == 'posicao' and int(o.number) == int(page)):
+			obj['obj']= o
+	return render(request,'ensino.html',obj)
 
 def variancia(request,page):
-	pass
+	allEnsino = Ensino.objects.all()
+	obj = {};
+	for o in allEnsino:
+		if(str(o.name) == 'variancia' and int(o.number) == int(page)):
+			obj['obj']= o
+	return render(request,'ensino.html',obj)
+
 
 def graficos(request,page):
-	pass
+	allEnsino = Ensino.objects.all()
+	obj = {};
+	for o in allEnsino:
+		if(str(o.name) == 'graficos' and int(o.number) == int(page)):
+			obj['obj']= o
+	return render(request,'ensino.html',obj)
 	
 def regressao(request,page):
-	pass
+	allEnsino = Ensino.objects.all()
+	obj = {};
+	for o in allEnsino:
+		if(str(o.name) == 'regressao' and int(o.number) == int(page)):
+			obj['obj']= o
+	return render(request,'ensino.html',obj)
