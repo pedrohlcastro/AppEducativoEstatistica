@@ -2,34 +2,39 @@
 {% block title%}Learn Estatistica - MENU{% endblock title%}
 {%load staticfiles%}
 {% block content %}
-       <section class="container">
-              <div class="row">
-                     <div class="col s4">
-                            <a href="{%url 'central' '1'%}"><img class="gray-effect" src="{%static "img/circle.png"%}" alt="circulo" height="300px" width="300px"/></a>
-                     </div>
-                     <div class="col s4">
-                            <a href="{%url "posicao" '1'%}"><img class="gray-effect" src="{%static "img/circle.png"%}" alt="circulo" height="300px" width="300px"/></a>
-                     </div>
-                     <div class="col s4">
-                            <a href="{%url "variancia" '1'%}"><img class="gray-effect" src="{%static "img/circle.png"%}" alt="circulo" height="300px" width="300px"/></a>
-                     </div>
-              </div>
-              <div class="row">
-                  <div class="col s1 push-s2">
-                      <a href="{%url "graficos" '1'%}"><img class="gray-effect" src="{%static "img/circle.png"%}" alt="circulo" height="300px" width="300px"/></a>
-                  </div>
-                  <div class="col s3 push-s5">
-                      <a href="{%url "regressao" '1'%}"><img class="gray-effect" src="{%static "img/circle.png"%}" alt="circulo" height="300px" width="300px"/></a>
-                  </div>
-
-              </div>
-      </section>
-      <footer>
-        <div class="container">
-          <p class="white-text">
-              Desenvolvido durante Trabalho de Estatistica 2016-1
-          </p>
+  <section class="container">
+    <div class="row">
+      {% if obj.um == '1'%}
+        <div class="col s4">
+          <a href="{%url 'central' '1'%}"><img class="gray-effect" src="{%static "img/circle.png"%}" alt="circulo" height="300px" width="300px"/></a>
         </div>
-      </footer>
+      {% else %}
+        <div class="col s4">
+          <a href="{%url 'central' '1'%}"><img src="{%static "img/circle.png"%}" alt="circulo" height="300px" width="300px"/></a>
+        </div>
+      {% endif %}
+      <div class="col s4">
+        <a href="{%url "posicao" '1'%}"><img class="gray-effect" src="{%static "img/circle.png"%}" alt="circulo" height="300px" width="300px"/></a>
+      </div>
+      <div class="col s4">
+        <a href="{%url "variancia" '1'%}"><img class="gray-effect" src="{%static "img/circle.png"%}" alt="circulo" height="300px" width="300px"/></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s1 push-s2">
+        <a href="{%url "graficos" '1'%}"><img class="gray-effect" src="{%static "img/circle.png"%}" alt="circulo" height="300px" width="300px"/></a>
+      </div>
+      <div class="col s3 push-s5">
+        <a href="{%url "regressao" '1'%}"><img class="gray-effect" src="{%static "img/circle.png"%}" alt="circulo" height="300px" width="300px"/></a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p class="white-text">
+        Desenvolvido durante Trabalho de Estatistica 2016-1
+      </p>
+    </div>
+  </footer>
 
 {% endblock content%}

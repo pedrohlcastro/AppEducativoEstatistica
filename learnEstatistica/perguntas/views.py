@@ -2,8 +2,10 @@ from django.shortcuts import render,redirect
 from django.core.cache import cache
 from django.shortcuts import render,redirect
 from models import Perguntas
+from home.models import Menu
 
 def central(request,page):
+	menu = Menu.objects.all()[0]
 	allPerguntas = Perguntas.objects.all()
 	obj = {}
 	#acha a referencia da page no DB
@@ -27,6 +29,8 @@ def central(request,page):
 		redireciona = str(obj['obj'].getLink());
 		if redireciona == '-1':
 			if cache.get('acertos') == 3:
+				menu.um = '0'
+				menu.save()
 				return render(request,'parabens.html',{'obj':'Medidas de Tendencia Central'})
 			else:
 				##perdi

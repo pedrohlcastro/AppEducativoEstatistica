@@ -1,5 +1,5 @@
 {% extends "main.html"%}
-{% block title%}{% endblock title%}
+{% block title%}You Win{% endblock title%}
 {%load staticfiles%}
 {% block content %}
 
@@ -10,8 +10,8 @@
 	        <div class="col s1 push-s4" style="padding-top: 25px;">
 	          <a class="btn-floating btn-large waves-effect waves-light red" href="{% url "home1"%}"><i class="material-icons">view_module</i></a>
 	        </div>
-	        <div class="col s1 push-s5"style="padding-top: 25px;">
-	          <button type="submit" class="btn-floating btn-large waves-effect waves-light red" ><i class="material-icons">skip_next</i></button>
+	        <div class="col s1 push-s5" style="padding-top: 25px;">
+	          <a  href ="{% url "home1"%}" class="btn-floating btn-large waves-effect waves-light red" ><i class="material-icons">skip_next</i></a>
 	        </div>
 	      </div>
 	    </div>
