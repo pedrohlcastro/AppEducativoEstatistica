@@ -17,3 +17,9 @@ footer{
   filter: grayscale(0); /* Microsoft Edge and Firefox 35+ */
   -webkit-filter: grayscale(0);
 }
+.center-align {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

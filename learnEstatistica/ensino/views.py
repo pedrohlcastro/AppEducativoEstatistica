@@ -15,7 +15,7 @@ def posicao(request,page):
 	for o in allEnsino:
 		if(str(o.name) == 'posicao' and int(o.number) == int(page)):
 			obj['obj']= o
-	return render(request,'ensino.html',obj)
+	return render(request,'ensino2.html',obj)
 
 def variancia(request,page):
 	allEnsino = Ensino.objects.all()
@@ -23,7 +23,7 @@ def variancia(request,page):
 	for o in allEnsino:
 		if(str(o.name) == 'variancia' and int(o.number) == int(page)):
 			obj['obj']= o
-	return render(request,'ensino.html',obj)
+	return render(request,'ensino3.html',obj)
 
 
 def graficos(request,page):
@@ -32,7 +32,7 @@ def graficos(request,page):
 	for o in allEnsino:
 		if(str(o.name) == 'graficos' and int(o.number) == int(page)):
 			obj['obj']= o
-	return render(request,'ensino.html',obj)
+	return render(request,'ensino4.html',obj)
 	
 def regressao(request,page):
 	allEnsino = Ensino.objects.all()
@@ -40,4 +40,4 @@ def regressao(request,page):
 	for o in allEnsino:
 		if(str(o.name) == 'regressao' and int(o.number) == int(page)):
 			obj['obj']= o
-	return render(request,'ensino.html',obj)
+	return render(request,'ensino5.html',obj)

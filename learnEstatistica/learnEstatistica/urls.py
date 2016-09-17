@@ -20,4 +20,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^',include('home.urls'), name = 'home'),
     url(r'^ensino/',include('ensino.urls'), name = 'ensino'),
+    url(r'^perguntas/',include('perguntas.urls'), name = 'perguntas'),
 ]
