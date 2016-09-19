@@ -1,9 +1,3 @@
-var obj = {
-    1: false,
-    2: false,
-    3: false,
-    4: false,
-    5: false
-};
-
-localStorage.setItem('gameStorage', JSON.stringify(obj));
+$(document).ready(function() {
+	$('.gray-effect:hover').fadeTo("slow", 0.33);
+});

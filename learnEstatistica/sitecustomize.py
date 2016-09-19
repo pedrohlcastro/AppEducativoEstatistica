@@ -1,1 +1,1 @@
-import sys; sys.setdefaultencoding('utf-16-be')
+import sys; sys.setdefaultencoding('utf-8')
