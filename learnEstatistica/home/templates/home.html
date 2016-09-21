@@ -6,31 +6,31 @@
     <div class="row">
       {% if obj.um == '1'%}
         <div class="col s4">
-          <a href="{%url 'central' '1'%}"><img class="gray-effect rotate" src="{%static "img/c1.png"%}" alt="circulo" height="300px" width="300px"/></a>
+          <a href="{%url 'central' '1'%}"><img class="gray-effect rotate" src="{%static "img/c1.png"%}" alt="circulo" height="300px" width="300px"/><p id="link">Medidas de</p></a>
         </div>
       {% else %}
         <div class="col s4">
-          <a href="{%url 'central' '1'%}"><img src="{%static "img/c1.png"%}" alt="circulo" height="300px" class= "rotate" width="300px"/></a>
+          <a href="{%url 'central' '1'%}"><img src="{%static "img/c1.png"%}" alt="circulo" height="300px" class= "rotate" width="300px"/><p id="link">Medidas de</p></a>
         </div>
       {% endif %}
 
       {% if obj.dois == '1'%}
         <div class="col s4">
-          <a href="{%url "posicao" '1'%}"><img class="gray-effect rotate" src="{%static "img/c2.png"%}" alt="circulo" height="300px" width="300px"/></a>
+          <a href="{%url "posicao" '1'%}"><img class="gray-effect rotate" src="{%static "img/c2.png"%}" alt="circulo" height="300px" width="300px"/><p id="link">Medidas de</p></a>
         </div>
       {%else%}
         <div class="col s4">
-          <a href="{%url "posicao" '1'%}"><img src="{%static "img/c2.png"%}" class = "rotate"alt="circulo" height="300px" width="300px"/></a>
+          <a href="{%url "posicao" '1'%}"><img src="{%static "img/c2.png"%}" class = "rotate"alt="circulo" height="300px" width="300px"/><p id="link">Medidas de</p></a>
         </div>
       {%endif%}
 
       {% if obj.tres == '1'%}
         <div class="col s4">
-          <a href="{%url "variancia" '1'%}"><img class="gray-effect rotate" src="{%static "img/c3.png"%}" alt="circulo" height="300px" width="300px"/></a>
+          <a href="{%url "variancia" '1'%}"><img class="gray-effect rotate" src="{%static "img/c3.png"%}" alt="circulo" height="300px" width="300px"/><p id="link">Medidas de</p></a>
         </div>
       {%else%}
          <div class="col s4">
-          <a href="{%url "variancia" '1'%}"><img src="{%static "img/c3.png"%}" alt="circulo" class =  "rotate" height="300px" width="300px"/></a>
+          <a href="{%url "variancia" '1'%}"><img src="{%static "img/c3.png"%}" alt="circulo" class =  "rotate" height="300px" width="300px"/><p id="link">Medidas de</p></a>
         </div>
       {%endif%}
     </div>
@@ -39,21 +39,21 @@
     <div class="row">
       {% if obj.quatro == '1'%}
         <div class="col s1 push-s2">
-          <a href="{%url "graficos" '1'%}"><img class="gray-effect rotate" src="{%static "img/c4.png"%}" alt="circulo" height="300px" width="300px"/></a>
+          <a href="{%url "graficos" '1'%}"><img class="gray-effect rotate" src="{%static "img/c4.png"%}" alt="circulo" height="300px" width="300px"/><p id="link">Medidas de</p></a>
         </div>
       {%else%}
         <div class="col s1 push-s2">
-          <a href="{%url "graficos" '1'%}"><img src="{%static "img/c4.png"%}" class="rotate" alt="circulo" height="300px" width="300px"/></a>
+          <a href="{%url "graficos" '1'%}"><img src="{%static "img/c4.png"%}" class="rotate" alt="circulo" height="300px" width="300px"/><p id="link">Medidas de</p></a>
         </div>
       {%endif%}
 
       {% if obj.cinco == '1'%}
         <div class="col s3 push-s5">
-          <a href="{%url "regressao" '1'%}"><img class="gray-effect rotate" src="{%static "img/c5.png"%}" alt="circulo" height="300px" width="300px"/></a>
+          <a href="{%url "regressao" '1'%}"><img class="gray-effect rotate" src="{%static "img/c5.png"%}" alt="circulo" height="300px" width="300px"/><p id="link">Medidas de</p></a>
         </div>
       {%else%}
         <div class="col s3 push-s5">
-          <a href="{%url "regressao" '1'%}"><img src="{%static "img/c5.png"%}" class="rotate"alt="circulo" height="300px" width="300px"/></a>
+          <a href="{%url "regressao" '1'%}"><img src="{%static "img/c5.png"%}" class="rotate"alt="circulo" height="300px" width="300px"/><p id="link">Medidas de</p></a>
         </div>
       {%endif%}
     </div>
@@ -66,7 +66,7 @@
         </p>
         {%if obj.um == '0' and obj.dois == '0' and obj.tres == '0' and obj.quatro == '0' and obj.cinco == '0'%}
           <div class="col s6 flow-text" style="padding-top:25px;">
-            <a  href = "{%url "reset"%}" class="btn-floating btn-large waves-effect waves-light red" ><i class="material-icons">replay</i></a>
+            <a  href = "{%url "reset"%}" class="btn-floating btn-large waves-effect waves-light red" ><i class="material-icons">replay</i><p id="link">Medidas de</p></a>
             Reset Game
           </div>
         {%endif%}
