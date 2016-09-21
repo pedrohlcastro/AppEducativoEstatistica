@@ -1,26 +1,43 @@
-main {
-  flex: 1 0 auto;
-}
-body{
-    background-color: #0759A5;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
 footer{
     background-color: #07a5a2;
-    min-height: 80px;
+    display: flex;
+    min-height: 120px;
 }
 .content{
-    min-height: 800px;
+    min-height: 650px;
 }
-img {
+.gray-effect {
   filter: gray; /* IE6-9 */
   filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
   -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
 }
 /* Disable grayscale on hover */
-img:hover {
+.gray-effect:hover {
   filter: none;
+  filter: grayscale(0); /* Microsoft Edge and Firefox 35+ */
   -webkit-filter: grayscale(0);
+}
+.center-align {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.rotate{
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+.rotate:hover{
+   -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+.inside-img {
+  display:block;
+  float:left;
+  width:40px;
+  padding-top:15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
 }
