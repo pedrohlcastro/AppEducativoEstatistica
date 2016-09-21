@@ -15,3 +15,9 @@ def reset(request):
 	obj.cinco = '1'
 	obj.save()
 	return redirect('home1')
+
+def menu(request):
+	return render(request,'menu.html');
+
+def credits(request):
+	return render(request,'credits.html');

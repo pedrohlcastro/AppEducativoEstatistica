@@ -1,0 +1,15 @@
+{% extends "main.html"%}
+{% block title%}Learn Estatistica - MENU{% endblock title%}
+{%load staticfiles%}
+{% block content %}
+  <section class="container content center-align">
+  	<img src="{%static "img/c1.png"%}" alt = "Logo"><br>
+  	<div style="padding-top:15px;">
+  		<a class="waves-effect waves-light btn-large red button-menu" href="{%url 'home1' %}"><img class="inside-img" src="{%static "img/play.png"%}"/>Jogar</a><br>	
+  	</div>
+  	<div style="padding-top:15px;">
+  		<a class="waves-effect waves-light btn-large red button-menu" href="{%url 'credits' %}"><img class="inside-img" src="{%static "img/cre.png"%}"/>Créditos</a><br>	
+  	</div>
+  </section>
+
+{% endblock content%}

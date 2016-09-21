@@ -41,3 +41,7 @@ footer{
   padding-bottom: 15px;
   padding-left: 15px;
 }
+.button-menu{
+  min-width: 200px;
+  min-height: 20px;
+}
