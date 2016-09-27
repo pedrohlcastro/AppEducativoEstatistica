@@ -60,15 +60,17 @@
   </section>
   <footer>
     <div class="container white-text">
-      <div class="row">
-        <p class="col s6 flow-text">
-          Desenvolvido durante Trabalho de Estatistica 2016-1
-        </p>
+      <div class="row" style="padding-top:25px;">
+        <div class="col s6 push-s2" style="padding-top:15px;">
+          <a class="waves-effect waves-light btn-large red button-menu" href="{%url 'credits' %}"><img class="inside-img" src="{%static "img/cre.png"%}"/>Créditos</a><br>  
+        </div>
         {%if obj.um == '0' and obj.dois == '0' and obj.tres == '0' and obj.quatro == '0' and obj.cinco == '0'%}
-          <div class="col s6 flow-text" style="padding-top:25px;">
-            <a  href = "{%url "reset"%}" class="btn-floating btn-large waves-effect waves-light red" ><i class="material-icons">replay</i><p id="link">Medidas de</p></a>
+          <div class="col s4 flow-text" style="padding-top:25px;">
+            <a  href = "{%url "reset"%}" class="btn-floating btn-large waves-effect waves-light red" ><img class="inside-img" src="{%static "img/reset.png" %}"/><p id="link">Medidas de</p></a>
             Reset Game
           </div>
+        {%else%}
+          <h5 style="padding-top:25px;">Aprendendendo Estatistica</h5>
         {%endif%}
       </div>
       

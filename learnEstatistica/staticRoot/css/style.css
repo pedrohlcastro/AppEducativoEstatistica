@@ -1,3 +1,7 @@
+ #link {
+    max-width: 200px;
+    display: none;
+ }
 footer{
     background-color: #07a5a2;
     display: flex;
