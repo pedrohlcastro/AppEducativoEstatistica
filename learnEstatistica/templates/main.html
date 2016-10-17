@@ -13,6 +13,15 @@
             </title>
        </head>
        <body>
+            {% if messages %}
+                <div class="container white-text flow-text">
+                    <ul>
+                        {% for message in messages %}
+                            <blockquote>{{message}}</blockquote>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
             <div class="content">
                 {% block content%}{% endblock content%}
             </div>

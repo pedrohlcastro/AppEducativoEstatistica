@@ -1,8 +1,11 @@
 from django.shortcuts import render,redirect
 from django.core.cache import cache
 from django.shortcuts import render,redirect
+from django.contrib import messages
 from models import Perguntas
 from home.models import Menu
+
+FAIL = 99 #esqueceu de responder
 
 def central(request,page):
 	menu = Menu.objects.all()[0]
@@ -23,8 +26,6 @@ def central(request,page):
 		reposta = request.POST.get('group1',False)
 		if str(reposta) == str(obj['obj'].getResp()):
 			cache.incr('acertos')
-		print(str(cache.get('acertos')))
-
 		#trata redirecionamento
 		redireciona = str(obj['obj'].getLink());
 		if redireciona == '-1':

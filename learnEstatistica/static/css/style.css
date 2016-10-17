@@ -60,3 +60,7 @@ footer{
     width: 90%;
     padding: 20px;
 }
+
+label{
+  color: white;
+}
