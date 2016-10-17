@@ -40,6 +40,7 @@ def central(request,page):
 	return render(request,'perguntas.html',obj)
 
 def posicao(request,page):
+	menu = Menu.objects.all()[0]
 	allPerguntas = Perguntas.objects.all()
 	obj = {}
 	#acha a referencia da page no DB
@@ -63,6 +64,8 @@ def posicao(request,page):
 		redireciona = str(obj['obj'].getLink());
 		if redireciona == '-1':
 			if cache.get('acertos') == 3:
+				menu.dois = 0
+				menu.save()
 				return render(request,'parabens.html',{'obj':'Medidas Posicao'})
 			else:
 				##perdi
@@ -72,6 +75,7 @@ def posicao(request,page):
 	return render(request,'perguntas.html',obj)
 
 def variancia(request,page):
+	menu = Menu.objects.all()[0]
 	allPerguntas = Perguntas.objects.all()
 	obj = {}
 	#acha a referencia da page no DB
@@ -95,6 +99,8 @@ def variancia(request,page):
 		redireciona = str(obj['obj'].getLink());
 		if redireciona == '-1':
 			if cache.get('acertos') == 3:
+				menu.tres = 0
+				menu.save()
 				return render(request,'parabens.html',{'obj':'Medidas de Variancia'})
 			else:
 				##perdi
@@ -104,6 +110,7 @@ def variancia(request,page):
 	return render(request,'perguntas.html',obj)
 
 def graficos(request,page):
+	menu = Menu.objects.all()[0]
 	allPerguntas = Perguntas.objects.all()
 	obj = {}
 	#acha a referencia da page no DB
@@ -127,6 +134,8 @@ def graficos(request,page):
 		redireciona = str(obj['obj'].getLink());
 		if redireciona == '-1':
 			if cache.get('acertos') == 3:
+				menu.quatro = 0
+				menu.save()
 				return render(request,'parabens.html',{'obj':'Graficos'})
 			else:
 				##perdi
@@ -136,6 +145,7 @@ def graficos(request,page):
 	return render(request,'perguntas.html',obj)
 	
 def regressao(request,page):
+	menu = Menu.objects.all()[0]
 	allPerguntas = Perguntas.objects.all()
 	obj = {}
 	#acha a referencia da page no DB
@@ -159,6 +169,8 @@ def regressao(request,page):
 		redireciona = str(obj['obj'].getLink());
 		if redireciona == '-1':
 			if cache.get('acertos') == 3:
+				menu.cinco = 0
+				menu.save()
 				return render(request,'parabens.html',{'obj':'Regressao Simples'})
 			else:
 				##perdi

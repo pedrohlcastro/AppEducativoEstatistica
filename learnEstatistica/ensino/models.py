@@ -16,6 +16,6 @@ class Ensino(models.Model):
 	title = models.CharField(max_length = 400, default='titulo')
 	fulltext = models.TextField()
 	link = models.CharField('Caso -1 vai para questoes',max_length = 3, default = 2)
-	linkVolta = models.CharField('Caso -1 vai para questoes',max_length = 3, default = 2)
+	linkVolta = models.CharField('Caso -1 vai para home',max_length = 3, default = 2)
 	def __str__(self):
 		return str(self.name)

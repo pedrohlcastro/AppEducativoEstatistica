@@ -49,3 +49,14 @@ footer{
   min-width: 200px;
   min-height: 20px;
 }
+
+.text-blue{
+  -moz-text-decoration-color: #0759A5; /* Code for Firefox */
+    text-decoration-color: #0759A5;
+}
+#centro-horizontal{
+  display: block;
+    margin: auto;
+    width: 90%;
+    padding: 20px;
+}

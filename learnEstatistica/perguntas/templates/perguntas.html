@@ -2,9 +2,9 @@
 {% block title%}Pergunta:{{obj.number}}{% endblock title%}
 {%load staticfiles%}
 {% block content %}
-  <section class="container white-text content">
+  <section class="container white-text content flow-text">
     <h3>Pergunta {{obj.number}}</h3>
-    <p class="flow-text white-text">{{obj.pergunta}}</p>
+    <p class="flow-text white-text">{{obj.pergunta|safe}}</p>
     <form method="POST">
       {% csrf_token %}
       <p>
