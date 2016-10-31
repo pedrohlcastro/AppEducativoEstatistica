@@ -55,7 +55,12 @@ footer{
     text-decoration-color: #0759A5;
 }
 #centro-horizontal{
-  position:absolute;
-  left:50%;
-  margin-left:-50px;
+  display: block;
+    margin: auto;
+    width: 90%;
+    padding: 20px;
+}
+
+label{
+  color: white;
 }
