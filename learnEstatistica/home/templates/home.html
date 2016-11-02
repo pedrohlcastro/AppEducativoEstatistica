@@ -5,11 +5,11 @@
   <section class="container content">
     <div class="row">
       {% if obj.um == '1'%}
-        <div class="col s6 push-s2">
+        <div class="col s6 push-s3">
           <a href="{%url 'central' '1'%}"><img class="gray-effect rotate" src="{%static "img/c1.png"%}" alt="circulo" height="300px" width="300px"/></a>
         </div>
       {% else %}
-        <div class="col s6 push-s2">
+        <div class="col s6 push-s3">
           <a href="{%url 'central' '1'%}"><img src="{%static "img/c1.png"%}" alt="circulo" height="300px" class= "rotate" width="300px"/></a>
         </div>
       {% endif %}
@@ -26,11 +26,11 @@
     </div>
     <div class="row">
       {% if obj.tres == '1'%}
-        <div class="col s6 push-s2">
+        <div class="col s6 push-s3">
           <a href="{%url "variancia" '1'%}"><img class="gray-effect rotate" src="{%static "img/c3.png"%}" alt="circulo" height="300px" width="300px"/></a>
         </div>
       {%else%}
-         <div class="col s6 push-s2">
+         <div class="col s6 push-s3">
           <a href="{%url "variancia" '1'%}"><img src="{%static "img/c3.png"%}" alt="circulo" class =  "rotate" height="300px" width="300px"/></a>
         </div>
       {%endif%}
@@ -48,7 +48,7 @@
   <footer>
     <div class="container white-text">
       <div class="row" style="padding-top:25px;">
-        <div class="col s6 push-s3" style="padding-top:15px;">
+        <div class="col s6 push-s4" style="padding-top:15px;">
           <a class="waves-effect waves-light btn-large red button-menu" href="{%url 'credits' %}"><img class="inside-img" src="{%static "img/cre.png"%}"/>Créditos</a><br>  
         </div>
         {%if obj.um == '0' and obj.dois == '0' and obj.tres == '0' and obj.quatro == '0'%}
