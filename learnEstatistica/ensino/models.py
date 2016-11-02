@@ -18,4 +18,4 @@ class Ensino(models.Model):
 	link = models.CharField('Caso -1 vai para questoes',max_length = 3, default = 2)
 	linkVolta = models.CharField('Caso -1 vai para home',max_length = 3, default = 2)
 	def __str__(self):
-		return str(self.name)
+		return str(self.name) + '-'+ str(self.number)

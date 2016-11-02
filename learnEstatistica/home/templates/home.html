@@ -5,55 +5,42 @@
   <section class="container content">
     <div class="row">
       {% if obj.um == '1'%}
-        <div class="col s4">
+        <div class="col s6 push-s2">
           <a href="{%url 'central' '1'%}"><img class="gray-effect rotate" src="{%static "img/c1.png"%}" alt="circulo" height="300px" width="300px"/></a>
         </div>
       {% else %}
-        <div class="col s4">
+        <div class="col s6 push-s2">
           <a href="{%url 'central' '1'%}"><img src="{%static "img/c1.png"%}" alt="circulo" height="300px" class= "rotate" width="300px"/></a>
         </div>
       {% endif %}
 
       {% if obj.dois == '1'%}
-        <div class="col s4">
+        <div class="col s6">
           <a href="{%url "posicao" '1'%}"><img class="gray-effect rotate" src="{%static "img/c2.png"%}" alt="circulo" height="300px" width="300px"/></a>
         </div>
       {%else%}
-        <div class="col s4">
+        <div class="col s6">
           <a href="{%url "posicao" '1'%}"><img src="{%static "img/c2.png"%}" class = "rotate"alt="circulo" height="300px" width="300px"/></a>
         </div>
       {%endif%}
-
+    </div>
+    <div class="row">
       {% if obj.tres == '1'%}
-        <div class="col s4">
+        <div class="col s6 push-s2">
           <a href="{%url "variancia" '1'%}"><img class="gray-effect rotate" src="{%static "img/c3.png"%}" alt="circulo" height="300px" width="300px"/></a>
         </div>
       {%else%}
-         <div class="col s4">
+         <div class="col s6 push-s2">
           <a href="{%url "variancia" '1'%}"><img src="{%static "img/c3.png"%}" alt="circulo" class =  "rotate" height="300px" width="300px"/></a>
         </div>
       {%endif%}
-    </div>
-
-
-    <div class="row">
       {% if obj.quatro == '1'%}
-        <div class="col s1 push-s2">
+        <div class="col s6">
           <a href="{%url "graficos" '1'%}"><img class="gray-effect rotate" src="{%static "img/c5.png"%}" alt="circulo" height="300px" width="300px"/></a>
         </div>
       {%else%}
-        <div class="col s1 push-s2">
+        <div class="col s6">
           <a href="{%url "graficos" '1'%}"><img src="{%static "img/c5.png"%}" class="rotate" alt="circulo" height="300px" width="300px"/></a>
-        </div>
-      {%endif%}
-
-      {% if obj.cinco == '1'%}
-        <div class="col s3 push-s5">
-          <a href="{%url "regressao" '1'%}"><img class="gray-effect rotate" src="{%static "img/c4.png"%}" alt="circulo" height="300px" width="300px"/></a>
-        </div>
-      {%else%}
-        <div class="col s3 push-s5">
-          <a href="{%url "regressao" '1'%}"><img src="{%static "img/c4.png"%}" class="rotate"alt="circulo" height="300px" width="300px"/></a>
         </div>
       {%endif%}
     </div>
@@ -61,16 +48,18 @@
   <footer>
     <div class="container white-text">
       <div class="row" style="padding-top:25px;">
-        <div class="col s6 push-s2" style="padding-top:15px;">
+        <div class="col s6 push-s3" style="padding-top:15px;">
           <a class="waves-effect waves-light btn-large red button-menu" href="{%url 'credits' %}"><img class="inside-img" src="{%static "img/cre.png"%}"/>Créditos</a><br>  
         </div>
-        {%if obj.um == '0' and obj.dois == '0' and obj.tres == '0' and obj.quatro == '0' and obj.cinco == '0'%}
+        {%if obj.um == '0' and obj.dois == '0' and obj.tres == '0' and obj.quatro == '0'%}
           <div class="col s4 flow-text" style="padding-top:25px;">
             <a  href = "{%url "reset"%}" class="btn-floating btn-large waves-effect waves-light red" ><img class="inside-img" src="{%static "img/reset.png" %}"/></a>
             Reset Game
           </div>
         {%else%}
-          <h5 style="padding-top:25px;">Aprendendendo Estatistica</h5>
+          <div class="col s4" style="padding-top:15px;">
+        <a class="waves-effect waves-light btn-large red button-menu" href="{%url 'menu' %}"><img class="inside-img" src="{%static "img/reset.png"%}"/>Voltar</a><br> 
+        </div>
         {%endif%}
       </div>
       
