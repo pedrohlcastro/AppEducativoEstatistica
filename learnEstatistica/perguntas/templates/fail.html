@@ -2,8 +2,11 @@
 {% block title%}You Fail{% endblock title%}
 {%load staticfiles%}
 {% block content %}
-
-  	<h3 class="container center-align white-text">Você não venceu o módulo {{obj}}</h3>
+	<div class="container center-align white-text">
+	  	<h3>Você não venceu o módulo {{obj}}</h3>
+	  	<h4>Ops! Parece que você errou a resposta de alguma pergunta...<br>Clique em um dos botões e jogue novamente...
+	  	</h4>
+	</div>
   	<footer>
 	    <div class="container">
 	      <div class="row">
