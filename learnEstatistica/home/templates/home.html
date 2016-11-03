@@ -15,11 +15,11 @@
       {% endif %}
 
       {% if obj.dois == '1'%}
-        <div class="col s6">
+        <div class="col s6 push-s1">
           <a href="{%url "posicao" '1'%}"><img class="gray-effect rotate" src="{%static "img/c2.png"%}" alt="circulo" height="300px" width="300px"/></a>
         </div>
       {%else%}
-        <div class="col s6">
+        <div class="col s6 push-s1">
           <a href="{%url "posicao" '1'%}"><img src="{%static "img/c2.png"%}" class = "rotate"alt="circulo" height="300px" width="300px"/></a>
         </div>
       {%endif%}
@@ -35,12 +35,12 @@
         </div>
       {%endif%}
       {% if obj.quatro == '1'%}
-        <div class="col s6">
+        <div class="col s6 push-s1">
           <a href="{%url "graficos" '1'%}"><img class="gray-effect rotate" src="{%static "img/c5.png"%}" alt="circulo" height="300px" width="300px"/></a>
         </div>
       {%else%}
-        <div class="col s6">
-          <a href="{%url "graficos" '1'%}"><img src="{%static "img/c5.png"%}" class="rotate" alt="circulo" height="300px" width="300px"/></a>
+        <div class="col s6 push-s1">
+          <a href="{%url "graficos" '1'%}"><img class="rotate" src="{%static "img/c5.png"%}" alt="circulo" height="300px" width="300px"/></a>
         </div>
       {%endif%}
     </div>
@@ -52,10 +52,9 @@
           <a class="waves-effect waves-light btn-large red button-menu" href="{%url 'credits' %}"><img class="inside-img" src="{%static "img/cre.png"%}"/>Créditos</a><br>  
         </div>
         {%if obj.um == '0' and obj.dois == '0' and obj.tres == '0' and obj.quatro == '0'%}
-          <div class="col s4 flow-text" style="padding-top:25px;">
-            <a  href = "{%url "reset"%}" class="btn-floating btn-large waves-effect waves-light red" ><img class="inside-img" src="{%static "img/reset.png" %}"/></a>
-            Reset Game
-          </div>
+          <div class="col s4" style="padding-top:15px;">
+        <a class="waves-effect waves-light btn-large red button-menu" href="{%url 'reset' %}"><img class="inside-img" src="{%static "img/reset.png"%}"/>Reset</a><br> 
+        </div>
         {%else%}
           <div class="col s4" style="padding-top:15px;">
         <a class="waves-effect waves-light btn-large red button-menu" href="{%url 'menu' %}"><img class="inside-img" src="{%static "img/reset.png"%}"/>Voltar</a><br> 
