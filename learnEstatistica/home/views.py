@@ -21,3 +21,6 @@ def menu(request):
 
 def credits(request):
 	return render(request,'credits.html');
+
+def fonte(request):
+	return render(request,'fonte.html');
