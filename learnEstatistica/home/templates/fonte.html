@@ -2,12 +2,24 @@
 {% block title%}Learn Estatistica - FONTE{% endblock title%}
 {%load staticfiles%}
 {% block content %}
-  <section class="container content white-text flow-text center-align">
+  <section class="container content white-text flow-text">
   	<h3>Utilizamos como fonte:</h3>
   	<ul class="collection indigo-text darken-4">
-		<a href="https://disciplinas.stoa.usp.br/pluginfile.php/1042521/mod_resource/content/1/separatrizes.pdf"><li class="collection-item">Portal USP</li></a>
-		<a href="http://www.mapadaprova.com.br/questoes/de/racioc--logico-e-matematico/estatistica-basica/medidas-de-dispersao"><li class="collection-item">Mapa da Prova</li></a>
+		<li class="collection-item">Portal USP: https://disciplinas.stoa.usp.br/pluginfile.php/1042521/mod_resource/content/1/separatrizes.pdf</li>
+		<li class="collection-item">Mapa da Prova: http://www.mapadaprova.com.br/questoes/de/racioc--logico-e-matematico/estatistica-basica/medidas-de-dispersao</li>
 	</ul>
   </section>
+  <footer>
+    <div class="container white-text">
+      <div class="row" style="padding-top:25px;">
+        <div class="col s6 push-s3" style="padding-top:15px;">
+          <a class="waves-effect waves-light btn-large red button-menu" href="{%url 'credits' %}"><img class="inside-img" src="{%static "img/cre.png"%}"/>Créditos</a><br>  
+        </div>
+        <div class="col s4 push-s1" style="padding-top:15px;">
+        <a class="waves-effect waves-light btn-large red button-menu" href="{%url 'home1' %}"><img class="inside-img" src="{%static "img/reset.png"%}"/>Voltar</a><br> 
+        </div>
+      </div> 
+    </div>
+  </footer>
 
 {% endblock content%}
